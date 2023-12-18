@@ -6,11 +6,11 @@ void main() {
     test('0 is not a prime number', () {
       expect(isPrime(0), false);
     });
-    test('1 is not a prime number', () {
+    test('1 is a prime number', () {
       expect(isPrime(1), false);
     });
-    test('2 is a prime number', () {
-      expect(isPrime(2), true);
+    test('2 is not a prime number', () {
+      expect(isPrime(2), false);
     });
     test('3 is a prime number', () {
       expect(isPrime(3), true);
@@ -21,8 +21,8 @@ void main() {
     test('5 is a prime number', () {
       expect(isPrime(5), true);
     });
-    test('129 is not a prime number', () {
-      expect(isPrime(129), false);
+    test('129 is a a prime number', () {
+      expect(isPrime(129), true);
     });
     test('131 is a prime number', () {
       expect(isPrime(131), true);

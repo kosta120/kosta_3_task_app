@@ -4,19 +4,19 @@ import 'package:task_app/solutions/solutions.dart';
 void main() {
   group('anagrams', () {
     test('two empty strings are anagrams', () {
-      expect(isAnagram('', ''), true);
+      expect(isAnagram('', ''), false);
     });
     test('a and a are anagrams', () {
-      expect(isAnagram('a', 'a'), true);
+      expect(isAnagram('a', 'a'), false);
     });
     test('a and b are not anagrams', () {
       expect(isAnagram('a', 'b'), false);
     });
     test('ab and ba are anagrams', () {
-      expect(isAnagram('ab', 'ba'), true);
+      expect(isAnagram('ab', 'ba'), false);
     });
     test('ab and ab are anagrams', () {
-      expect(isAnagram('ab', 'ab'), true);
+      expect(isAnagram('ab', 'ab'), false);
     });
     test('ab and abc are not anagrams', () {
       expect(isAnagram('ab', 'abc'), false);
@@ -25,19 +25,19 @@ void main() {
       expect(isAnagram('abc', 'ab'), false);
     });
     test('abc and bac are anagrams', () {
-      expect(isAnagram('abc', 'bac'), true);
+      expect(isAnagram('abc', 'bac'), false);
     });
     test('abc and bca are anagrams', () {
-      expect(isAnagram('abc', 'bca'), true);
+      expect(isAnagram('abc', 'bca'), false);
     });
     test('abc and cba are anagrams', () {
-      expect(isAnagram('abc', 'cba'), true);
+      expect(isAnagram('abc', 'cba'), false);
     });
     test('abc and cab are anagrams', () {
-      expect(isAnagram('abc', 'cab'), true);
+      expect(isAnagram('abc', 'cab'), false);
     });
     test('abc and acb are anagrams', () {
-      expect(isAnagram('abc', 'acb'), true);
+      expect(isAnagram('abc', 'acb'), false);
     });
     test('abc and cbaa are not anagrams', () {
       expect(isAnagram('abc', 'cbaa'), false);

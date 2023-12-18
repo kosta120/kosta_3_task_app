@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
 int countVowels(String input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  String lowercaseInput = input.toLowerCase();
+  int count = 0;
+
+  for (int i = 0; i < lowercaseInput.length; i++) {
+    if ("aeiou".contains(lowercaseInput[i])) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 class S3384 extends StatefulWidget {

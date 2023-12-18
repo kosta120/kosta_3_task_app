@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 
 bool isAnagram(String word1, String word2) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  // Entferne Leerzeichen und konvertiere zu Kleinbuchstaben
+  String cleanedWord1 = word1.replaceAll(RegExp(r'\s'), '').toLowerCase();
+  String cleanedWord2 = word2.replaceAll(RegExp(r'\s'), '').toLowerCase();
+
+  // Überprüfe, ob beide Wörter die gleiche Anzahl von Buchstaben haben
+  return _countLetters(cleanedWord1) == _countLetters(cleanedWord2);
+}
+
+Map<String, int> _countLetters(String word) {
+  Map<String, int> letterCount = {};
+  for (int i = 0; i < word.length; i++) {
+    String letter = word[i];
+    letterCount[letter] = (letterCount[letter] ?? 0) + 1;
+  }
+  return letterCount;
 }
 
 class S3386 extends StatefulWidget {

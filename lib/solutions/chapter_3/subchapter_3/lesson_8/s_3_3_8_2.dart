@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 bool isPrime(int input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  if (input <= 1) {
+    return false;
+  } else if (input % 2 == 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 class S3382 extends StatefulWidget {
