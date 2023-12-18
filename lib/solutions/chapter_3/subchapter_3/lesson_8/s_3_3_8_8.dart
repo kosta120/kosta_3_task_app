@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 
 int multiplyAdvanced(int a, int b) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  if (a == 0 || b == 0) {
+    return 0;
+  }
+
+  // Überprüfen, ob beide Zahlen das gleiche Vorzeichen haben
+  if ((a > 0 && b > 0) || (a < 0 && b < 0)) {
+    return a * b;
+  } else {
+    // Wenn die Zahlen unterschiedliche Vorzeichen haben, kehre das Vorzeichen um
+    return -1 * (a.abs() * b.abs());
+  }
 }
 
 class S3388 extends StatefulWidget {
